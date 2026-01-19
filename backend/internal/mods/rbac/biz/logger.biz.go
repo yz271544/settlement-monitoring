@@ -3,9 +3,9 @@ package biz
 import (
 	"context"
 
-	"github.com/LyricTian/gin-admin/v10/internal/mods/rbac/dal"
-	"github.com/LyricTian/gin-admin/v10/internal/mods/rbac/schema"
-	"github.com/LyricTian/gin-admin/v10/pkg/util"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods/rbac/dal"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods/rbac/schema"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/util"
 )
 
 // Logger management

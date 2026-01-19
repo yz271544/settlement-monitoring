@@ -3,10 +3,10 @@ package bootstrap
 import (
 	"context"
 
-	"github.com/LyricTian/gin-admin/v10/internal/config"
-	"github.com/LyricTian/gin-admin/v10/pkg/gormx"
-	"github.com/LyricTian/gin-admin/v10/pkg/logging"
 	"github.com/spf13/cast"
+	"github.com/yz271544/settlement-monitoring/v10/internal/config"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/gormx"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/logging"
 )
 
 func initLoggerHook(_ context.Context, cfg *logging.HookConfig) (*logging.Hook, error) {

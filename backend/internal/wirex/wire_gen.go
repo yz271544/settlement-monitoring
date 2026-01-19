@@ -8,12 +8,12 @@ package wirex
 
 import (
 	"context"
-	"github.com/LyricTian/gin-admin/v10/internal/mods"
-	"github.com/LyricTian/gin-admin/v10/internal/mods/rbac"
-	"github.com/LyricTian/gin-admin/v10/internal/mods/rbac/api"
-	"github.com/LyricTian/gin-admin/v10/internal/mods/rbac/biz"
-	"github.com/LyricTian/gin-admin/v10/internal/mods/rbac/dal"
-	"github.com/LyricTian/gin-admin/v10/pkg/util"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods/rbac"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods/rbac/api"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods/rbac/biz"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods/rbac/dal"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/util"
 )
 
 // Injectors from wire.go:

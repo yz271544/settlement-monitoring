@@ -10,8 +10,8 @@ import (
 
 	"github.com/google/wire"
 
-	"github.com/LyricTian/gin-admin/v10/internal/mods"
-	"github.com/LyricTian/gin-admin/v10/pkg/util"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/util"
 )
 
 func BuildInjector(ctx context.Context) (*Injector, func(), error) {

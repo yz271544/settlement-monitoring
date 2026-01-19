@@ -1,4 +1,4 @@
-module github.com/LyricTian/gin-admin/v10
+module github.com/yz271544/settlement-monitoring/v10
 
 go 1.19
 

@@ -1,10 +1,10 @@
 package rbac
 
 import (
-	"github.com/LyricTian/gin-admin/v10/internal/mods/rbac/api"
-	"github.com/LyricTian/gin-admin/v10/internal/mods/rbac/biz"
-	"github.com/LyricTian/gin-admin/v10/internal/mods/rbac/dal"
 	"github.com/google/wire"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods/rbac/api"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods/rbac/biz"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods/rbac/dal"
 )
 
 // Collection of wire providers

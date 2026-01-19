@@ -5,9 +5,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/LyricTian/gin-admin/v10/internal/config"
-	"github.com/LyricTian/gin-admin/v10/pkg/errors"
-	"github.com/LyricTian/gin-admin/v10/pkg/util"
+	"github.com/yz271544/settlement-monitoring/v10/internal/config"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/errors"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/util"
 )
 
 const (

@@ -6,11 +6,11 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/LyricTian/gin-admin/v10/pkg/encoding/json"
-	"github.com/LyricTian/gin-admin/v10/pkg/errors"
-	"github.com/LyricTian/gin-admin/v10/pkg/logging"
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/encoding/json"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/errors"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/logging"
 	"go.uber.org/zap"
 )
 

@@ -7,7 +7,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/LyricTian/gin-admin/v10/pkg/logging"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/logging"
 	"go.uber.org/zap"
 )
 

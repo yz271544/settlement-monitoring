@@ -4,10 +4,10 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/LyricTian/gin-admin/v10/internal/mods/rbac/schema"
-	"github.com/LyricTian/gin-admin/v10/pkg/crypto/hash"
-	"github.com/LyricTian/gin-admin/v10/pkg/util"
 	"github.com/stretchr/testify/assert"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods/rbac/schema"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/crypto/hash"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/util"
 )
 
 func TestUser(t *testing.T) {

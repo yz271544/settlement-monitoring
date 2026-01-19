@@ -3,9 +3,9 @@ package mods
 import (
 	"context"
 
-	"github.com/LyricTian/gin-admin/v10/internal/mods/rbac"
 	"github.com/gin-gonic/gin"
 	"github.com/google/wire"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods/rbac"
 )
 
 const (

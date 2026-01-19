@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/LyricTian/gin-admin/v10/cmd"
 	"github.com/urfave/cli/v2"
+	"github.com/yz271544/settlement-monitoring/v10/cmd"
 )
 
 // Usage: go build -ldflags "-X main.VERSION=x.x.x"

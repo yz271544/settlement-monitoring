@@ -1,10 +1,10 @@
 package prom
 
 import (
-	"github.com/LyricTian/gin-admin/v10/internal/config"
-	"github.com/LyricTian/gin-admin/v10/pkg/promx"
-	"github.com/LyricTian/gin-admin/v10/pkg/util"
 	"github.com/gin-gonic/gin"
+	"github.com/yz271544/settlement-monitoring/v10/internal/config"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/promx"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/util"
 )
 
 var (

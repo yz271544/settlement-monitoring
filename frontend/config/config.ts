@@ -68,28 +68,40 @@ export default defineConfig({
   // Cesium configuration
   chainWebpack(config: any) {
     // Copy Cesium static files (Workers, Assets, Widgets, ThirdParty)
-    config.plugin('copy').use('copy-webpack-plugin', [
-      {
-        patterns: [
-          {
-            from: 'node_modules/cesium/Build/Cesium/Workers',
-            to: 'cesium/Workers',
-          },
-          {
-            from: 'node_modules/cesium/Build/Cesium/ThirdParty',
-            to: 'cesium/ThirdParty',
-          },
-          {
-            from: 'node_modules/cesium/Build/Cesium/Assets',
-            to: 'cesium/Assets',
-          },
-          {
-            from: 'node_modules/cesium/Build/Cesium/Widgets',
-            to: 'cesium/Widgets',
-          },
-        ],
-      },
-    ]);
+    // config.plugin('copy').use('copy-webpack-plugin', [
+    //   {
+    //     patterns: [
+    //       {
+    //         from: 'node_modules/cesium/Build/Cesium/Workers',
+    //         to: 'cesium/Workers',
+    //       },
+    //       {
+    //         from: 'node_modules/cesium/Build/Cesium/ThirdParty',
+    //         to: 'cesium/ThirdParty',
+    //       },
+    //       {
+    //         from: 'node_modules/cesium/Build/Cesium/Assets',
+    //         to: 'cesium/Assets',
+    //       },
+    //       {
+    //         from: 'node_modules/cesium/Build/Cesium/Widgets',
+    //         to: 'cesium/Widgets',
+    //       },
+    //     ],
+    //   },
+    // ]);
+    config.plugin('copy').tap((args: any[]) => {
+      const existing = (args[0] && args[0].patterns) ? args[0].patterns : [];
+
+      existing.push(
+        { from: 'node_modules/cesium/Build/Cesium/Workers', to: 'cesium/Workers' },
+        { from: 'node_modules/cesium/Build/Cesium/ThirdParty', to: 'cesium/ThirdParty' },
+        { from: 'node_modules/cesium/Build/Cesium/Assets', to: 'cesium/Assets' },
+        { from: 'node_modules/cesium/Build/Cesium/Widgets', to: 'cesium/Widgets' },
+      );
+
+      return [{ patterns: existing, options: args[0]?.options || {} }];
+    });
   },
   // Define Cesium base URL
   define: {

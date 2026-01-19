@@ -1,10 +1,10 @@
 package middleware
 
 import (
-	"github.com/LyricTian/gin-admin/v10/pkg/errors"
-	"github.com/LyricTian/gin-admin/v10/pkg/util"
 	"github.com/casbin/casbin/v2"
 	"github.com/gin-gonic/gin"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/errors"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/util"
 )
 
 var ErrCasbinDenied = errors.Forbidden("com.casbin.denied", "Permission denied")

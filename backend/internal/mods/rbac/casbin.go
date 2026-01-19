@@ -12,13 +12,13 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/LyricTian/gin-admin/v10/internal/config"
-	"github.com/LyricTian/gin-admin/v10/internal/mods/rbac/dal"
-	"github.com/LyricTian/gin-admin/v10/internal/mods/rbac/schema"
-	"github.com/LyricTian/gin-admin/v10/pkg/cachex"
-	"github.com/LyricTian/gin-admin/v10/pkg/logging"
-	"github.com/LyricTian/gin-admin/v10/pkg/util"
 	"github.com/casbin/casbin/v2"
+	"github.com/yz271544/settlement-monitoring/v10/internal/config"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods/rbac/dal"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods/rbac/schema"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/cachex"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/logging"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/util"
 	"go.uber.org/zap"
 )
 

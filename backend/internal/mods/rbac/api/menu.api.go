@@ -1,10 +1,10 @@
 package api
 
 import (
-	"github.com/LyricTian/gin-admin/v10/internal/mods/rbac/biz"
-	"github.com/LyricTian/gin-admin/v10/internal/mods/rbac/schema"
-	"github.com/LyricTian/gin-admin/v10/pkg/util"
 	"github.com/gin-gonic/gin"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods/rbac/biz"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods/rbac/schema"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/util"
 )
 
 // Menu management for RBAC

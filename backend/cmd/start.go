@@ -8,9 +8,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/LyricTian/gin-admin/v10/internal/bootstrap"
-	"github.com/LyricTian/gin-admin/v10/internal/config"
 	"github.com/urfave/cli/v2"
+	"github.com/yz271544/settlement-monitoring/v10/internal/bootstrap"
+	"github.com/yz271544/settlement-monitoring/v10/internal/config"
 )
 
 // The function defines a CLI command to start a server with various flags and options, including the

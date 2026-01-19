@@ -4,11 +4,11 @@ import (
 	"context"
 	"path/filepath"
 
-	"github.com/LyricTian/gin-admin/v10/internal/config"
-	"github.com/LyricTian/gin-admin/v10/internal/mods/rbac/api"
-	"github.com/LyricTian/gin-admin/v10/internal/mods/rbac/schema"
-	"github.com/LyricTian/gin-admin/v10/pkg/logging"
 	"github.com/gin-gonic/gin"
+	"github.com/yz271544/settlement-monitoring/v10/internal/config"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods/rbac/api"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods/rbac/schema"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/logging"
 	"go.uber.org/zap"
 	"gorm.io/gorm"
 )

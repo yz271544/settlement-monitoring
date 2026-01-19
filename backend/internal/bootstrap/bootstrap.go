@@ -8,12 +8,12 @@ import (
 	"os"
 	"strings"
 
-	"github.com/LyricTian/gin-admin/v10/internal/config"
-	_ "github.com/LyricTian/gin-admin/v10/internal/swagger"
-	"github.com/LyricTian/gin-admin/v10/internal/utility/prom"
-	"github.com/LyricTian/gin-admin/v10/internal/wirex"
-	"github.com/LyricTian/gin-admin/v10/pkg/logging"
-	"github.com/LyricTian/gin-admin/v10/pkg/util"
+	"github.com/yz271544/settlement-monitoring/v10/internal/config"
+	_ "github.com/yz271544/settlement-monitoring/v10/internal/swagger"
+	"github.com/yz271544/settlement-monitoring/v10/internal/utility/prom"
+	"github.com/yz271544/settlement-monitoring/v10/internal/wirex"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/logging"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/util"
 	"go.uber.org/zap"
 )
 

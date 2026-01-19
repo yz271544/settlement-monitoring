@@ -4,13 +4,13 @@ import (
 	"context"
 	"time"
 
-	"github.com/LyricTian/gin-admin/v10/pkg/errors"
-	"github.com/LyricTian/gin-admin/v10/pkg/logging"
-	"github.com/LyricTian/gin-admin/v10/pkg/util"
 	"github.com/gin-gonic/gin"
 	"github.com/go-redis/redis/v8"
 	"github.com/go-redis/redis_rate/v9"
 	"github.com/patrickmn/go-cache"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/errors"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/logging"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/util"
 	"go.uber.org/zap"
 	"golang.org/x/time/rate"
 )

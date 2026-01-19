@@ -6,10 +6,10 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/LyricTian/gin-admin/v10/pkg/encoding/json"
-	"github.com/LyricTian/gin-admin/v10/pkg/encoding/toml"
-	"github.com/LyricTian/gin-admin/v10/pkg/errors"
 	"github.com/creasty/defaults"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/encoding/json"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/encoding/toml"
+	"github.com/yz271544/settlement-monitoring/v10/pkg/errors"
 )
 
 var (
