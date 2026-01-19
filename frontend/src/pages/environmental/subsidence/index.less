@@ -1,0 +1,17 @@
+.mapCard {
+  :global {
+    .ant-card-body {
+      padding: 0;
+    }
+  }
+}
+
+.cesiumContainer {
+  width: 100%;
+  height: calc(100vh - 200px);
+  position: relative;
+
+  @media (max-width: 768px) {
+    height: calc(100vh - 250px);
+  }
+}
