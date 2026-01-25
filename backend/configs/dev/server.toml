@@ -2,11 +2,11 @@
 AppName = "ginadmin"
 Version = "v10.1.0"
 Debug = true
-PprofAddr = "" # Pprof monitor address, "localhost:6060"
+PprofAddr = ""                                       # Pprof monitor address, "localhost:6060"
 DisableSwagger = false
 DisablePrintConfig = false
 DefaultLoginPwd = "6351623c8cef86fefabfa7da046fc619" # MD5("abc-123")
-MenuFile = "menu.json" # Or use "menu_cn.json"
+MenuFile = "menu.json"                               # Or use "menu_cn.json"
 DenyOperateMenu = true
 
 [General.HTTP]
@@ -50,7 +50,7 @@ Type = "postgres" # sqlite3/mysql/postgres
 # MySQL DSN
 # DSN = "root:123@tcp(127.0.0.1:3306)/ginadmin?charset=utf8mb4&parseTime=True&loc=Local"
 # PostgreSQL DSN
-DSN = "host=localhost user=settle password=Settle0119 dbname=settledb port=35432 sslmode=disable TimeZone=Asia/Shanghai"
+DSN = "host=localhost user=postgres password=STmt0125 dbname=settlement port=35432 sslmode=disable TimeZone=Asia/Shanghai"
 MaxLifetime = 86400
 MaxIdleTime = 3600
 MaxOpenConns = 100
@@ -67,7 +67,7 @@ Height = 160
 CacheType = "memory" # memory/redis
 
 [Util.Captcha.Redis]
-Addr = "" # If empty, then use the same configuration as Storage.Cache.Redis
+Addr = ""              # If empty, then use the same configuration as Storage.Cache.Redis
 Username = ""
 Password = ""
 DB = 1
@@ -78,8 +78,8 @@ Enable = false
 Port = 9100
 BasicUsername = "admin"
 BasicPassword = "admin"
-LogApis = [] # Log APIs, e.g. ["/api/v1/users"]
-LogMethods = [] # Log HTTP methods, e.g. ["GET"]
+LogApis = []            # Log APIs, e.g. ["/api/v1/users"]
+LogMethods = []         # Log HTTP methods, e.g. ["GET"]
 DefaultCollect = true
 
 [Dictionary]

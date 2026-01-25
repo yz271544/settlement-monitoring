@@ -36,3 +36,5 @@ ginadmin.log
 gin-admin
 
 migration-project-source/
+
+*.log

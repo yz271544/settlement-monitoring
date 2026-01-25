@@ -1,2 +1,8 @@
 .idea/
 .vscode/
+docs/gin-admin-cli/
+
+*.log
+
+docker/postgres
+docker/redis

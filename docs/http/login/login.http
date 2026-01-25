@@ -1,0 +1,15 @@
+### POST /api/v1/login
+POST http://{{host}}:{{port}}/api/v1/login
+Content-Type: application/json
+
+{
+  "username":"admin",
+  "password":"6351623c8cef86fefabfa7da046fc619",
+  "captcha_code":"4563",
+  "captcha_id":"NgZsMDcKfKAqFPCwO0AK"
+}
+
+> {%
+    client.global.set("token", response.body.data.access_token)
+%}
+###

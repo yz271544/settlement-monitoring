@@ -5,6 +5,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/wire"
+	"github.com/yz271544/settlement-monitoring/v10/internal/mods/guard"
 	"github.com/yz271544/settlement-monitoring/v10/internal/mods/rbac"
 )
 
@@ -16,14 +17,19 @@ const (
 var Set = wire.NewSet(
 	wire.Struct(new(Mods), "*"),
 	rbac.Set,
+	guard.Set,
 )
 
 type Mods struct {
-	RBAC *rbac.RBAC
+	RBAC  *rbac.RBAC
+	Guard *guard.Guard
 }
 
 func (a *Mods) Init(ctx context.Context) error {
 	if err := a.RBAC.Init(ctx); err != nil {
+		return err
+	}
+	if err := a.Guard.Init(ctx); err != nil {
 		return err
 	}
 
@@ -43,12 +49,18 @@ func (a *Mods) RegisterRouters(ctx context.Context, e *gin.Engine) error {
 	if err := a.RBAC.RegisterV1Routers(ctx, v1); err != nil {
 		return err
 	}
+	if err := a.Guard.RegisterV1Routers(ctx, v1); err != nil {
+		return err
+	}
 
 	return nil
 }
 
 func (a *Mods) Release(ctx context.Context) error {
 	if err := a.RBAC.Release(ctx); err != nil {
+		return err
+	}
+	if err := a.Guard.Release(ctx); err != nil {
 		return err
 	}
 

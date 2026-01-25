@@ -1,0 +1,18 @@
+### GET /api/v1/captcha/id
+GET http://{{host}}:{{port}}/api/v1/captcha/id
+
+###
+
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+X-Trace-Id: TRACE-D5QSU0V2HLFKT4M2JFR0
+Date: Sun, 25 Jan 2026 08:06:27 GMT
+Content-Length: 61
+
+{
+  "success": true,
+  "data": {
+    "captcha_id": "NgZsMDcKfKAqFPCwO0AK"
+  }
+}
+###

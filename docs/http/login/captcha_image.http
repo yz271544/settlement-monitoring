@@ -1,0 +1,4 @@
+### GET /api/v1/captcha/id
+GET http://{{host}}:{{port}}/api/v1/captcha/image?id=NgZsMDcKfKAqFPCwO0AK
+
+###

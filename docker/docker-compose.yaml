@@ -1,0 +1,28 @@
+services:
+  postgres:
+    container_name: "settlement-monitoring-pg"
+    image: "postgres:17"
+    ports:
+      - "35432:5432"
+    environment:
+      - POSTGRES_DB=settlement
+      - POSTGRES_PASSWORD=STmt0125
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./postgres/init:/docker-entrypoint-initdb.d
+      - ./postgres/data:/var/lib/postgresql/data
+      - ./postgres/conf/pg_hba.conf:/var/lib/postgresql/data/pg_hba.conf
+    restart: always
+
+  redis:
+    container_name: "settlement-monitoring-redis"
+    image: "bitnami/redis:8.0"
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - TZ=Asia/Shanghai
+    ports:
+      - "36379:6379"
+    volumes:
+      - ./redis/data:/redis/data
+      - ./redis/conf:/redis/config
+    restart: always
