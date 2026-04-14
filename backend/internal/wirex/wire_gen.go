@@ -132,9 +132,29 @@ func BuildInjector(ctx context.Context) (*Injector, func(), error) {
 	apiStaff := &api2.Staff{
 		StaffBiz: bizStaff,
 	}
+	scene := &dal2.Scene{
+		DB: db,
+	}
+	bizScene := &biz2.Scene{
+		SceneDal: scene,
+	}
+	apiScene := &api2.Scene{
+		SceneBiz: bizScene,
+	}
+	plotting := &dal2.Plotting{
+		DB: db,
+	}
+	bizPlotting := &biz2.Plotting{
+		PlottingDal: plotting,
+	}
+	apiPlotting := &api2.Plotting{
+		PlottingBiz: bizPlotting,
+	}
 	guardGuard := &guard.Guard{
-		DB:       db,
-		StaffAPI: apiStaff,
+		DB:          db,
+		StaffAPI:    apiStaff,
+		SceneAPI:    apiScene,
+		PlottingAPI: apiPlotting,
 	}
 	modsMods := &mods.Mods{
 		RBAC:  rbacRBAC,

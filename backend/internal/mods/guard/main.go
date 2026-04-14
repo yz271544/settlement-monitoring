@@ -11,8 +11,11 @@ import (
 )
 
 type Guard struct {
-	DB       *gorm.DB
-	StaffAPI *api.Staff
+	DB          *gorm.DB
+	StaffAPI    *api.Staff
+	SceneAPI    *api.Scene
+	PlottingAPI *api.Plotting
+
 	// TODO: 其他API逐步实现
 	/*
 		WatchkeeperAPI        *api.Watchkeeper
@@ -28,14 +31,15 @@ type Guard struct {
 		VantagePointAPI       *api.VantagePoint
 		KeyPartAPI            *api.KeyPart
 		DangerousPartAPI      *api.DangerousPart
-		SceneAPI              *api.Scene
-		PlottingAPI           *api.Plotting
 	*/
 }
 
 func (a *Guard) AutoMigrate(ctx context.Context) error {
 	return a.DB.AutoMigrate(
 		new(schema.Staff),
+		new(schema.Scene),
+		new(schema.Plotting),
+
 		// TODO: 其他表逐步迁移
 		/*
 			new(schema.Watchkeeper),
@@ -53,9 +57,7 @@ func (a *Guard) AutoMigrate(ctx context.Context) error {
 			new(schema.DangerousPart),
 			new(schema.Flow),
 			new(schema.GisRegion),
-			new(schema.Scene),
 			new(schema.Residence),
-			new(schema.Plotting),
 			new(schema.Camera),
 			new(schema.Equipment),
 			new(schema.Person),
@@ -105,14 +107,41 @@ func (a *Guard) RegisterV1Routers(ctx context.Context, v1 *gin.RouterGroup) erro
 		staff.GET("export-template", a.StaffAPI.ExportTemplate)
 	}
 
+	// 场景管理
+	scene := v1.Group("scene")
+	{
+		scene.GET("", a.SceneAPI.Query)
+		scene.GET(":id", a.SceneAPI.Get)
+		scene.POST("", a.SceneAPI.Create)
+		scene.PUT(":id", a.SceneAPI.Update)
+		scene.DELETE(":id", a.SceneAPI.Delete)
+		scene.POST("merge", a.SceneAPI.Merge)
+		scene.POST("split", a.SceneAPI.Split)
+		scene.GET("statistics", a.SceneAPI.Statistics)
+		scene.GET("centerpoint/:id", a.SceneAPI.GetCenterPoint)
+		scene.POST("import", a.SceneAPI.Import)
+		scene.GET("export", a.SceneAPI.Export)
+	}
+
+	// 标绘管理
+	plotting := v1.Group("plotting")
+	{
+		plotting.GET("", a.PlottingAPI.Query)
+		plotting.GET(":id", a.PlottingAPI.Get)
+		plotting.POST("", a.PlottingAPI.Create)
+		plotting.PUT(":id", a.PlottingAPI.Update)
+		plotting.DELETE(":id", a.PlottingAPI.Delete)
+		plotting.POST("sort", a.PlottingAPI.Sort)
+		plotting.POST("statistics", a.PlottingAPI.Statistics)
+		plotting.POST("calculate", a.PlottingAPI.Calculate)
+	}
+
 	// TODO: 其他API逐步实现（Watchkeeper, TargetedIndividuals, DogTrainer等）
 	/*
 		watchkeeper := v1.Group("watchkeeper") { ... }
 		targetedIndividuals := v1.Group("targeted-individuals") { ... }
 		policeDog := v1.Group("police-dog") { ... }
 		car := v1.Group("car") { ... }
-		scene := v1.Group("scene") { ... }
-		plotting := v1.Group("plotting") { ... }
 	*/
 
 	return nil

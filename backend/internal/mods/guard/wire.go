@@ -16,6 +16,16 @@ var Set = wire.NewSet(
 	wire.Struct(new(biz.Staff), "*"),
 	wire.Struct(new(api.Staff), "*"),
 
+	// Scene - 已实现
+	wire.Struct(new(dal.Scene), "*"),
+	wire.Struct(new(biz.Scene), "*"),
+	wire.Struct(new(api.Scene), "*"),
+
+	// Plotting - 已实现
+	wire.Struct(new(dal.Plotting), "*"),
+	wire.Struct(new(biz.Plotting), "*"),
+	wire.Struct(new(api.Plotting), "*"),
+
 	// TODO: 其他表逐步实现
 	/*
 		wire.Struct(new(dal.Watchkeeper), "*"),
@@ -57,11 +67,5 @@ var Set = wire.NewSet(
 		wire.Struct(new(dal.DangerousPart), "*"),
 		wire.Struct(new(biz.DangerousPart), "*"),
 		wire.Struct(new(api.DangerousPart), "*"),
-		wire.Struct(new(dal.Scene), "*"),
-		wire.Struct(new(biz.Scene), "*"),
-		wire.Struct(new(api.Scene), "*"),
-		wire.Struct(new(dal.Plotting), "*"),
-		wire.Struct(new(biz.Plotting), "*"),
-		wire.Struct(new(api.Plotting), "*"),
 	*/
 )
