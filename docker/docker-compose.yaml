@@ -16,7 +16,7 @@ services:
 
   redis:
     container_name: "settlement-monitoring-redis"
-    image: "bitnami/redis:8.0"
+    image: "soldevelo/redis:8.0"
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
       - TZ=Asia/Shanghai
